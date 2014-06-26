@@ -1,0 +1,184 @@
+{
+  "edges": [
+    {
+      "id": "3",
+      "source": "1031",
+      "target": "1030"
+    },
+    {
+      "id": "4",
+      "source": "1032",
+      "target": "1031"
+    },
+    {
+      "id": "5",
+      "source": "1033",
+      "target": "1032"
+    },
+    {
+      "id": "6",
+      "source": "1034",
+      "target": "1033"
+    },
+    {
+      "id": "7",
+      "source": "1035",
+      "target": "1034"
+    },
+    {
+      "id": "8",
+      "source": "1030",
+      "target": "1036"
+    },
+    {
+      "id": "9",
+      "source": "1037",
+      "target": "1035"
+    },
+    {
+      "id": "10",
+      "source": "1037",
+      "target": "1038"
+    },
+    {
+      "id": "11",
+      "source": "1038",
+      "target": "1037"
+    },
+    {
+      "id": "12",
+      "source": "1039",
+      "target": "1038"
+    },
+    {
+      "id": "13",
+      "source": "1040",
+      "target": "1039"
+    },
+    {
+      "id": "16",
+      "source": "1042",
+      "target": "1040"
+    },
+    {
+      "id": "17",
+      "source": "1043",
+      "target": "1042"
+    },
+    {
+      "id": "18",
+      "source": "1043",
+      "target": "1036"
+    },
+    {
+      "id": "19",
+      "source": "1044",
+      "target": "1043"
+    },
+    {
+      "id": "20",
+      "source": "1036",
+      "target": "1037"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "1031",
+      "label": "Node 1031",
+      "color": "rgb(90,90,90)",
+      "size": 100,
+      "type": "tweetegy"
+    },
+    {
+      "id": "1032",
+      "label": "Node 1032",
+      "color": "rgb(90,90,90)",
+      "size": 100,
+      "type": "tweetegy"
+    },
+    {
+      "id": "1033",
+      "label": "Node 1033",
+      "color": "rgb(90,90,90)",
+      "size": 100,
+      "type": "tweetegy"
+    },
+    {
+      "id": "1034",
+      "label": "Node 1034",
+      "color": "rgb(90,90,90)",
+      "size": 100,
+      "type": "tweetegy"
+    },
+    {
+      "id": "1035",
+      "label": "Node 1035",
+      "color": "rgb(90,90,90)",
+      "size": 100,
+      "type": "tweetegy"
+    },
+    {
+      "id": "1030",
+      "label": "Node 1030",
+      "color": "rgb(90,90,90)",
+      "size": 100,
+      "type": "tweetegy"
+    },
+    {
+      "id": "1037",
+      "label": "Node 1037",
+      "color": "rgb(90,90,90)",
+      "size": 100,
+      "type": "tweetegy"
+    },
+    {
+      "id": "1038",
+      "label": "Node 1038",
+      "color": "rgb(90,90,90)",
+      "size": 100,
+      "type": "tweetegy"
+    },
+    {
+      "id": "1039",
+      "label": "Node 1039",
+      "color": "rgb(90,90,90)",
+      "size": 100,
+      "type": "tweetegy"
+    },
+    {
+      "id": "1040",
+      "label": "Node 1040",
+      "color": "rgb(90,90,90)",
+      "size": 100,
+      "type": "tweetegy"
+    },
+    {
+      "id": "1042",
+      "label": "Node 1042",
+      "color": "rgb(255,0,0)",
+      "size": 100,
+      "type": "tweetegy"
+    },
+    {
+      "id": "1043",
+      "label": "Node 1043",
+      "color": "rgb(90,90,90)",
+      "size": 100,
+      "type": "tweetegy"
+    },
+    {
+      "id": "1044",
+      "label": "Node 1044",
+      "color": "rgb(255,0,0)",
+      "size": 100,
+      "type": "tweetegy"
+    },
+    {
+      "id": "1036",
+      "label": "Node 1036",
+      "color": "rgb(45,45,60)",
+      "size": 100,
+      "type": "tweetegy"
+    }
+  ]
+}
