@@ -2,7 +2,7 @@
 
 Example Sigma JS Network Graph Visualization.
 
-For more details about the story check the following blog post on [tweetegy.com](http://www.tweetegy.com/)
+For more details about the story check the following blog post on [tweetegy.com](http://www.tweetegy.com/2014/07/network-data-visualization-graph-using-sigmajs/)
 
 ## Installation / Try this out at home
 
