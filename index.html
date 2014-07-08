@@ -1,51 +1,59 @@
-<!-- START SIGMA IMPORTS -->
+<!-- Import Sigma JS -->
 <script src="../lib/sigma.min.js"></script>
 <script src="../lib/sigma.layout.forceAtlas2.min.js"></script>
 <script src="../lib/sigma.parsers.json.min.js"></script>
-<!-- END SIGMA IMPORTS -->
 
-<div id="container">
-  <style>
-    #network-graph {
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      position: absolute;
-    }
-  </style>
-  <div id="network-graph"></div>
-</div>
+<!-- Add some CSS so we can see the graph! -->
+<style>
+  #network-graph {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+</style>
 
+<!-- A placeholder for the graph -->
+<div id="network-graph"></div>
+
+<!-- The most basic usage of the Sigma JSON parser -->
 <script>
-sigma.parsers.json(
-  "/data/network.json",
+function getParameterByName(name) {
+  var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+  return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+};
 
-  {container: 'network-graph',
-  settings: {
-    labelThreshold: 3
-  }},
+sigma.parsers.json( "/data/network.json",
+
+  {container: 'network-graph'},
 
   function(s) { //This function is passed an instance of Sigma s
-    //Add a click event handler to navigate to different transports
-    s.bind('clickNode', function(e) {
-      window.location.href = "http://google.com";
+
+    nodeId = parseInt(getParameterByName('node_id'));
+
+    var selectedNode;
+
+    s.graph.nodes().forEach(function(node, i, a) {
+      if (node.id == nodeId) {
+        selectedNode = node;
+        return;
+      }
     });
 
-    nodeCount = s.graph.nodes().length;
-    forceTime = nodeCount * 50;
-
-    //Initialize nodes as a circle before applying the force
+    //Initialize nodes as a circle
     s.graph.nodes().forEach(function(node, i, a) {
       node.x = Math.cos(Math.PI * 2 * i / a.length);
       node.y = Math.sin(Math.PI * 2 * i / a.length);
     });
 
+    //Call refresh to render the new graph
+    s.refresh();
+
     s.startForceAtlas2();
 
-    //Stop the force after forceTime ms ...
-    setTimeout(function() {
-      s.stopForceAtlas2();
-    }, forceTime );
-});
+    if (selectedNode != undefined){
+      s.cameras[0].goTo({x:selectedNode['read_cam0:x'],y:selectedNode['read_cam0:y'],ratio:0.1});
+    }
+  });
 </script>
