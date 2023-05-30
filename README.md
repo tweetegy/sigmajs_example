@@ -13,7 +13,7 @@ For more details about the story check the following blog post on [tweetegy.com]
 3. Run the following command:
 
  ```
-python -m SimpleHTTPServer
+python -m http.server 8000
  ```
 
 Visit [http://localhost:8000](http://localhost:8000) and test the application!
